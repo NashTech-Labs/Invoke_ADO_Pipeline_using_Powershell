@@ -1,0 +1,140 @@
+{
+    "resources": [
+        {
+            "name": "storage-account",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "storage-account",
+                "dependsOn": "false",
+                "resourceGroupName": "",
+            }
+        },
+        {
+            "name": "blob-container",
+            "properties": {
+                "resourceType": "storage-container",
+                "storage_account_name": "",
+                "container_access_type": "private"
+            }
+        },
+        {
+            "name": "app-service-plan",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "app-service-plan",
+                "dependsOn": "false"
+            }
+        },
+        {
+            "name": "function-app-4",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "function-app",
+                "dependsOn": "true",
+                "resourceGroupName": "",
+                "storageAccountName": "",
+                "appServicePlan": "",
+                "storageAccountAccessKey": "",
+                "os_type": ""
+            },
+            "dependencies": [
+                {
+                    "resourceType": "storage-account"
+                },
+                {
+                    "resourceType": "app-service-plan"
+                }
+            ]
+        },
+        {
+            "name": "function-app-3",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "function-app",
+                "dependsOn": "true",
+                "resourceGroupName": "",
+                "storageAccountName": "",
+                "appServicePlan": "",
+                "storageAccountAccessKey": "",
+                "os_type": ""
+            },
+            "dependencies": [
+                {
+                    "resourceType": "storage-account"
+                },
+                {
+                    "resourceType": "app-service-plan"
+                }
+            ]
+        },
+        {
+            "name": "function-app-2",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "function-app",
+                "dependsOn": "true",
+                "resourceGroupName": "",
+                "storageAccountName": "",
+                "appServicePlan": "",
+                "storageAccountAccessKey": "",
+                "os_type": ""
+            },
+            "dependencies":[
+                {
+                    "resourceType":"storage-account"
+                },
+                {
+                    "resourceType":"app-service-plan"
+                }
+            ]
+        },
+        {
+            "name": "function-app-1",
+            "properties": {
+                "cloud": "Azure",
+                "resourceType": "function-app",
+                "dependsOn": "true",
+                "resourceGroupName": "",
+                "storageAccountName": "",
+                "appServicePlan": "",
+                "storageAccountAccessKey": "",
+                "os_type": ""
+            },
+            "dependencies":[
+                {
+                    "resourceType":"storage-account"
+                },
+                {
+                    "resourceType":"app-service-plan"
+                }
+            ]
+        },
+        {
+            "name": "eventhub-namspace",
+            "properties": {
+                "name": "",
+                "dependsOn": "false",
+                "resourceGroupName": ""
+            }
+        },
+        {
+            "name": "event-hub",
+            "properties": {
+                "name": "",
+                "namespaceName": "",
+                "resourceType": "event-hub",
+                "dependsOn": "false",
+                "resourceGroupName": ""
+            }
+        },
+        {
+            "name": "event-grid-topic",
+            "properties": {
+                "resourceType": "event-grid-topic",
+                "dependsOn": "false",
+                "resourceGroup": ""
+
+            }
+        }
+    ]
+}
