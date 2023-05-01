@@ -27,7 +27,7 @@ foreach ($number in $resource_type)
 
     $all_resource_type = $file_path.resources[$count].properties.resourceType
 
- if($resource_type_name -eq $resource_type_in_file -And $resource_type_in_file -eq $all_resource_type)
+ if($resource_type_name -eq $all_resource_type -And $resource_type_in_file -eq $all_resource_type)
   {    
 
     if($resource_type_in_file -eq $pipelineName)
